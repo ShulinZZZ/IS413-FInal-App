@@ -1,0 +1,29 @@
+﻿@model List<Entertainer>
+@{
+    ViewData["Title"] = "Entertainer List";
+}
+<h1 style="display: flex; justify-content: center; align-items: center;">Entertainer</h1>
+<table class="table table-bordered">
+    <theard class="fw-bold"> 
+        <tr>
+            
+            <th>Stage Name</th>
+            <th></th>
+        </tr>
+    </theard>
+    @foreach (Entertainer x in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@x.EntStageName</td>
+                <td>
+                    <a class="btn btn-info" asp-controller="Home" asp-action="EntertainersDetails" asp-route-id="@x.EntertainerId" style="background-color: white; border: 2px solid black;">View Details</a>
+                </td>
+            </tr>
+        </tbody>
+    }
+</table>
+
+<div>
+    <a class="btn btn-danger" asp-controller="Home" asp-action="EntertainersForm" style="background-color: dimgrey;border: 2px solid dimgrey;">Add Entertainer</a>
+</div>

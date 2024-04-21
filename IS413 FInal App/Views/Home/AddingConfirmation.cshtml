@@ -1,0 +1,42 @@
+﻿@model Entertainer
+@{
+    ViewData["Title"] = "Entertainer Added";
+}
+<h2> You have successfully added a new entertainer!</h2>
+<p> The new entertainer you added: </p>
+<br />
+<table class="table table-bordered">
+    <theard class="fw-bold">
+        <tr>
+
+            <th class="text-center">Stage Name</th>
+            <th class="text-center">SSN</th>
+            <th class="text-center">Street Address</th>
+            <th class="text-center">City</th>
+            <th class="text-center">State</th>
+            <th class="text-center">Zip Code</th>
+            <th class="text-center">Phone Number</th>
+            <th class="text-center">Web Page</th>
+            <th class="text-center">Mail Address</th>
+            <th class="text-center">Date Entered</th>
+
+        </tr>
+
+        <tbody>
+            <tr>
+                <td class="text-center">@Model.EntStageName</td>
+                <td class="text-center">@Model.EntSsn</td>
+                <td class="text-center">@Model.EntStreetAddress</td>
+                <td class="text-center">@Model.EntCity</td>
+                <td class="text-center">@Model.EntState</td>
+                <td class="text-center">@Model.EntZipCode</td>
+                <td class="text-center">@Model.EntPhoneNumber</td>
+                <td class="text-center">@Model.EntWebPage</td>
+                <td class="text-center">@Model.EntEmailAddress</td>
+                <td class="text-center">@Model.DateEntered</td>
+            </tr>
+        </tbody>
+
+</table>
+
+<a class="btn btn-info" asp-controller="Home" asp-action="index" style="background-color: white; border: 2px solid black;">Back to Home Page</a>
